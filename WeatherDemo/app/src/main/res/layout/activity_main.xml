@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwh.weatherdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/cityName"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入城市名"
+            />
+        <Button
+            android:id="@+id/search_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="搜索"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/weather_icon_now"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_below="@id/city"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/tempture"
+                android:layout_below="@id/description"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/quality"
+                android:layout_toRightOf="@id/city"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/wind"
+                android:layout_below="@id/quality"
+                android:layout_toRightOf="@id/description"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_below="@id/wind"
+                android:layout_toRightOf="@id/description"
+                android:layout_width="120dp"
+                android:layout_height="40dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/hour_forcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="每小时"
+            />
+        <View
+            android:layout_width="45dp"
+            android:layout_height="1dp"
+            android:background="#33000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <ListView
+            android:id="@+id/hour_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/day_forcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="每天预报"
+            />
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#33000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ListView
+            android:id="@+id/daily_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/comfort_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="舒适指数"
+            />
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#33000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/comfort_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

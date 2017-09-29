@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/hour_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:columnCount="4"
+        android:rowCount="1">
+        <TextView
+            android:id="@+id/hour_time"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
+            android:gravity="center|start"/>
+        <TextView
+            android:id="@+id/hour_description"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
+            android:gravity="center|start"/>
+        <TextView
+            android:id="@+id/hour_tempture"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
+            android:gravity="center|start"/>
+        <TextView
+            android:id="@+id/hour_wind"
+            android:layout_columnWeight="1"
+            android:layout_height="match_parent"
+            android:gravity="center|start"/>
+    </GridLayout>
+
+</LinearLayout>
